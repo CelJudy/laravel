@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\PhotoController;
 
 Route::resource('ruta_prueba', PruebaController::class);
@@ -56,4 +57,12 @@ Route::get('/ruta4/{id}',
 
 Route::get('/formulario', 
 function () {return view('form'); }
+);
+
+Route::get('/select1', 
+[ProductosController::class,'select1']
+);
+
+Route::get('/select2', 
+[ProductosController::class,'select2']
 );
