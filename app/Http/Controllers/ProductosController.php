@@ -15,7 +15,7 @@ class ProductosController extends Controller
     }
 
     public function select2(){
-        $nombre="cartulina";
+        $nombre="cartulinaaaa";
         $model=Productos::where(['nombre'=>$nombre,'precio'=>'3'])->get();
         foreach($model as $data){
             var_dump($data->getAttributes());
