@@ -7,15 +7,16 @@ use Illuminate\Http\Request;
 class PruebaController extends Controller
 {
     public function index(){
-        //lksanjcdlkashd
+        //
     }
 
+    public function create(){
+        //
+    }
 
     public function store(Request $request){
-        
-        //lkmlke
+        //
     }
-        //´po´546546
 
     public function show($id){
         //

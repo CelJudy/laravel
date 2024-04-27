@@ -4,8 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\PruebaController;
 
-Route::resource('ruta_prueba', PruebaController::class);
+Route::get('ruta5',function(){
+    return view('index');
+});
 
 /* Route::get('ruta_prueba',           [Controller::class,'index'])   ->name('ruta_prueba.index');
 
@@ -36,7 +39,7 @@ Route::get('ruta_prueba/{id}',      [Controller::class,'destroy']) ->name('ruta_
  */
 
 
-
+ Route::get('prueba', [ProductosController::class,'funcion']);
 
 
 Route::get('/ruta1', 

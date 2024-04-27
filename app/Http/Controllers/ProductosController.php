@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Productos;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\DB;
 
 class ProductosController extends Controller
 {
@@ -21,5 +22,15 @@ class ProductosController extends Controller
             var_dump($data->getAttributes());
         }
         
+    }
+    
+    public function funcion(){
+        $seq = DB::select("SELECT nextval('serial') as seq;")->first();
+
+        var_dump($seq);
+        die();
+        $id=date("y").$seq;
+        
+
     }
 }
