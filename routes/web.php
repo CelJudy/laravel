@@ -5,8 +5,14 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\PruebaController;
+use App\Http\Controllers\UsuariosController;
 
-Route::get('ruta5',function(){
+
+Route::get('/usuarios',function(){
+    return view('layout');
+});
+
+Route::get('/administrador',function(){
     return view('index');
 });
 
@@ -69,3 +75,24 @@ Route::get('/select1',
 Route::get('/select2', 
 [ProductosController::class,'select2']
 );
+
+Route::get('/selectAll', 
+[ProductosController::class,'selectAll']
+);
+
+Route::get('/insert', 
+[ProductosController::class,'insert']
+);
+
+Route::get('/delete', 
+[ProductosController::class,'delete']
+);
+
+
+Route::get('/formulario', 
+    function () {return view('form'); }
+);
+
+Route::post('/recibir', 
+    [ProductosController::class,'insertar']
+)->name('recibir');

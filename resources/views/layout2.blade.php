@@ -1,11 +1,11 @@
 <html>
-    @include('menu')
     <header style="background-color: gray">
-        <title>@yield('title')</title>
+        <title>@yield('titulo')</title>
 
-        @yield('head')
+        <link>
+        <script></script>
     </header>
     <body style="background-color: cyan">
-        @yield('content')
+        @yield('body')
     </body>
 </html>

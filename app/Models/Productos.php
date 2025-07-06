@@ -15,7 +15,6 @@ class Productos extends Model
         'stock'
     ];
 
-    protected $conection="pgsql";
     protected $primaryKey="id_producto";
-    public $timestamp=false;
+    public $timestamps=false;
 }
